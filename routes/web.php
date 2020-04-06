@@ -28,3 +28,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'IndexController@index')->name('index');
+
+Route::get('/activities/data', 'ActivityController@data')->name('activities.data');
+Route::get('/activities/{activity}/delete', 'ActivityController@delete')->name('activities.delete');
+Route::resource('activities', 'ActivityController');
+
+Route::get('/ministers/data', 'MinisterController@data')->name('ministers.data');
+Route::get('/ministers/{minister}/delete', 'MinisterController@delete')->name('ministers.delete');
+Route::resource('ministers', 'MinisterController');
