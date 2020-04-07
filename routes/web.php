@@ -36,3 +36,11 @@ Route::resource('activities', 'ActivityController');
 Route::get('/ministers/data', 'MinisterController@data')->name('ministers.data');
 Route::get('/ministers/{minister}/delete', 'MinisterController@delete')->name('ministers.delete');
 Route::resource('ministers', 'MinisterController');
+
+Route::get('/districts/data', 'DistrictController@data')->name('districts.data');
+Route::get('/districts/{district}/delete', 'DistrictController@delete')->name('districts.delete');
+Route::resource('districts', 'DistrictController');
+
+Route::get('/comorbidities/data', 'ComorbidityController@data')->name('comorbidities.data');
+Route::get('/comorbidities/{comorbidity}/delete', 'ComorbidityController@delete')->name('comorbidities.delete');
+Route::resource('comorbidities', 'ComorbidityController');
