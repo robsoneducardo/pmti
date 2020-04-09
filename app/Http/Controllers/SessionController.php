@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 
+use App\Activity;
 use App\Http\Requests\SessionStoreRequest;
 use App\Http\Requests\SessionUpdateRequest;
+use App\Minister;
 use App\Session;
 
 use Exception;
@@ -51,7 +53,9 @@ class SessionController extends Controller
      */
     public function create()
     {
-        return view('sessions.create');
+        $ministers = Minister::all();
+        $activities = Activity::all();
+        return view('sessions.create', compact('ministers', 'activities'));
     }
 
     /**
@@ -82,7 +86,9 @@ class SessionController extends Controller
      */
     public function show(Session $session)
     {
-        return view('sessions.show', compact('session'));
+        $minister = $session->minister()->first();
+        $activity = $session->activity()->first();
+        return view('sessions.show', compact('session', 'minister', 'activity'));
     }
 
     /**

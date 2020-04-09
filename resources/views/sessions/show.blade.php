@@ -24,10 +24,14 @@
                     </div>
                     <div class="well">
                         <dl>
-                            @foreach($session->toArray() as $key => $value)
-                                <dt>@lang('sessions.'.$key)</dt>
-                                <dd>{{ $value }}</dd>
-                            @endforeach
+                            <dt> Atividade: </dt>
+                            <dd>{{$activity->name}}</dd>
+                            <dt> Ministrante: </dt>
+                            <dd>{{$minister->name}}</dd>
+                            <dt> Data: </dt>
+                            <dd>{{$session->day}}</dd>
+                            <dt> Hora: </dt>
+                            <dd>{{$session->hour}}</dd>
                         </dl>
                     </div>
                 </div>
