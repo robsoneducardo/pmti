@@ -44,3 +44,7 @@ Route::resource('districts', 'DistrictController');
 Route::get('/comorbidities/data', 'ComorbidityController@data')->name('comorbidities.data');
 Route::get('/comorbidities/{comorbidity}/delete', 'ComorbidityController@delete')->name('comorbidities.delete');
 Route::resource('comorbidities', 'ComorbidityController');
+
+Route::get('/sessions/data', 'SessionController@data')->name('sessions.data');
+Route::get('/sessions/{session}/delete', 'SessionController@delete')->name('sessions.delete');
+Route::resource('sessions', 'SessionController');

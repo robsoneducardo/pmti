@@ -129,3 +129,27 @@ Breadcrumbs::for('comorbidities.delete', function ($breadcrumbs, $comorbidity) {
    $breadcrumbs->parent('comorbidities.show', $comorbidity);
    $breadcrumbs->push(Lang::get('comorbidities.delete', ['comorbidity' => $comorbidity->id]), route('comorbidities.delete', $comorbidity->id));
 });
+
+Breadcrumbs::for('sessions.index', function ($breadcrumbs) {
+   $breadcrumbs->push(Lang::get('sessions.index'), route('sessions.index'));
+});
+
+Breadcrumbs::for('sessions.create', function ($breadcrumbs) {
+   $breadcrumbs->parent('sessions.index');
+   $breadcrumbs->push(Lang::get('sessions.create'), route('sessions.create'));
+});
+
+Breadcrumbs::for('sessions.show', function ($breadcrumbs, $session) {
+   $breadcrumbs->parent('sessions.index');
+   $breadcrumbs->push(Lang::get('sessions.show', ['session' => $session->id]), route('sessions.show', $session->id));
+});
+
+Breadcrumbs::for('sessions.edit', function ($breadcrumbs, $session) {
+   $breadcrumbs->parent('sessions.show', $session);
+   $breadcrumbs->push(Lang::get('sessions.edit', ['session' => $session->id]), route('sessions.edit', $session->id));
+});
+
+Breadcrumbs::for('sessions.delete', function ($breadcrumbs, $session) {
+   $breadcrumbs->parent('sessions.show', $session);
+   $breadcrumbs->push(Lang::get('sessions.delete', ['session' => $session->id]), route('sessions.delete', $session->id));
+});
