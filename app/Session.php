@@ -6,7 +6,7 @@ use Laravelha\Support\Traits\Tableable;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
-class Activity extends Model
+class Session extends Model
 {
     use Tableable;
 
@@ -24,13 +24,29 @@ class Activity extends Model
     {
         return [
             ['data' => 'id', 'linkable' => true],
-            ['data' => 'name'],
-            ['data' => 'description'],
+            ['data' => 'activity.name'],
+            ['data' => 'minister.name'],
+            ['data' => 'day'],
+            ['data' => 'hour'],
         ];
     }
 
-    public function sessions(){
-        return $this->hasMany('App\Session');
+
+    /**
+     * Get the activity of Session.
+     */
+    public function activity()
+    {
+        return $this->belongsTo(Activity::class);
+    }
+
+
+    /**
+     * Get the minister of Session.
+     */
+    public function minister()
+    {
+        return $this->belongsTo(Minister::class);
     }
 
 }
