@@ -153,3 +153,27 @@ Breadcrumbs::for('sessions.delete', function ($breadcrumbs, $session) {
    $breadcrumbs->parent('sessions.show', $session);
    $breadcrumbs->push(Lang::get('sessions.delete', ['session' => $session->id]), route('sessions.delete', $session->id));
 });
+
+Breadcrumbs::for('matures.index', function ($breadcrumbs) {
+   $breadcrumbs->push(Lang::get('matures.index'), route('matures.index'));
+});
+
+Breadcrumbs::for('matures.create', function ($breadcrumbs) {
+   $breadcrumbs->parent('matures.index');
+   $breadcrumbs->push(Lang::get('matures.create'), route('matures.create'));
+});
+
+Breadcrumbs::for('matures.show', function ($breadcrumbs, $mature) {
+   $breadcrumbs->parent('matures.index');
+   $breadcrumbs->push(Lang::get('matures.show', ['mature' => $mature->id]), route('matures.show', $mature->id));
+});
+
+Breadcrumbs::for('matures.edit', function ($breadcrumbs, $mature) {
+   $breadcrumbs->parent('matures.show', $mature);
+   $breadcrumbs->push(Lang::get('matures.edit', ['mature' => $mature->id]), route('matures.edit', $mature->id));
+});
+
+Breadcrumbs::for('matures.delete', function ($breadcrumbs, $mature) {
+   $breadcrumbs->parent('matures.show', $mature);
+   $breadcrumbs->push(Lang::get('matures.delete', ['mature' => $mature->id]), route('matures.delete', $mature->id));
+});

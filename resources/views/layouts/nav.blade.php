@@ -14,4 +14,7 @@
 	<li class="{{ Request::is('routeName*') ? 'active' : '' }}" role="menuitem">
 		<a class="nav-link" href="{{route('sessions.index')}}">@lang('sessions.index')</a>
 	</li>
+	<li class="{{ Request::is('routeName*') ? 'active' : '' }}" role="menuitem">
+		<a class="nav-link" href="{{route('matures.index')}}">@lang('matures.index')</a>
+	</li>
 </ul>

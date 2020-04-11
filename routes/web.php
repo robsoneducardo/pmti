@@ -48,3 +48,7 @@ Route::resource('comorbidities', 'ComorbidityController');
 Route::get('/sessions/data', 'SessionController@data')->name('sessions.data');
 Route::get('/sessions/{session}/delete', 'SessionController@delete')->name('sessions.delete');
 Route::resource('sessions', 'SessionController');
+
+Route::get('/matures/data', 'MatureController@data')->name('matures.data');
+Route::get('/matures/{mature}/delete', 'MatureController@delete')->name('matures.delete');
+Route::resource('matures', 'MatureController');
