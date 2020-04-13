@@ -52,3 +52,7 @@ Route::resource('sessions', 'SessionController');
 Route::get('/matures/data', 'MatureController@data')->name('matures.data');
 Route::get('/matures/{mature}/delete', 'MatureController@delete')->name('matures.delete');
 Route::resource('matures', 'MatureController');
+
+Route::get('/sicknesses/data', 'SicknessController@data')->name('sicknesses.data');
+Route::get('/sicknesses/{sickness}/delete', 'SicknessController@delete')->name('sicknesses.delete');
+Route::resource('sicknesses', 'SicknessController');

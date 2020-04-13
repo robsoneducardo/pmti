@@ -177,3 +177,27 @@ Breadcrumbs::for('matures.delete', function ($breadcrumbs, $mature) {
    $breadcrumbs->parent('matures.show', $mature);
    $breadcrumbs->push(Lang::get('matures.delete', ['mature' => $mature->id]), route('matures.delete', $mature->id));
 });
+
+Breadcrumbs::for('sicknesses.index', function ($breadcrumbs) {
+   $breadcrumbs->push(Lang::get('sicknesses.index'), route('sicknesses.index'));
+});
+
+Breadcrumbs::for('sicknesses.create', function ($breadcrumbs) {
+   $breadcrumbs->parent('sicknesses.index');
+   $breadcrumbs->push(Lang::get('sicknesses.create'), route('sicknesses.create'));
+});
+
+Breadcrumbs::for('sicknesses.show', function ($breadcrumbs, $sickness) {
+   $breadcrumbs->parent('sicknesses.index');
+   $breadcrumbs->push(Lang::get('sicknesses.show', ['sickness' => $sickness->id]), route('sicknesses.show', $sickness->id));
+});
+
+Breadcrumbs::for('sicknesses.edit', function ($breadcrumbs, $sickness) {
+   $breadcrumbs->parent('sicknesses.show', $sickness);
+   $breadcrumbs->push(Lang::get('sicknesses.edit', ['sickness' => $sickness->id]), route('sicknesses.edit', $sickness->id));
+});
+
+Breadcrumbs::for('sicknesses.delete', function ($breadcrumbs, $sickness) {
+   $breadcrumbs->parent('sicknesses.show', $sickness);
+   $breadcrumbs->push(Lang::get('sicknesses.delete', ['sickness' => $sickness->id]), route('sicknesses.delete', $sickness->id));
+});
