@@ -11,6 +11,9 @@ class Session extends Model
     use Tableable;
 
     protected $guarded = ['id'];
+    protected $dates = ['day'];
+    protected $dateFormat = 'Y-m-d';
+
 
     /**
      * ['data' => 'columnName', 'searchable' => true, 'orderable' => true, 'linkable' => false]

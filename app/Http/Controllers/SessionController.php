@@ -31,8 +31,9 @@ class SessionController extends Controller
     public function index()
     {
         $columns = Session::getColumns();
+        $sessions = Session::all();
 
-        return view('sessions.index', compact('columns'));
+        return view('sessions.index', compact('columns', 'sessions'));
     }
 
     /**

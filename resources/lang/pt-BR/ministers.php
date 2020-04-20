@@ -1,14 +1,14 @@
 <?php
 
 return [
-    'model'      => 'Ministrante',
-    'index'      => 'Ministrantes',
-    'create'     => 'Novo(a)',
-    'show'       => 'Ministrante :ministrante',
-    'edit'       => 'Editar',
-    'delete'     => 'Remover',
+    'model'      => 'Minister',
+    'index'      => 'Ministers',
+    'create'     => 'Create',
+    'show'       => 'Minister :minister',
+    'edit'       => 'Edit Minister',
+    'delete'     => 'Remove Minister',
     'id'         => 'id',
-    'created_at' => 'Criado em',
-    'updated_at' => 'Atualizado em',
-    'name' => 'nome',
+    'created_at' => 'Created at',
+    'updated_at' => 'Update at',
+    'name' => 'name',
 ];

@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'model'      => 'Activity',
-    'index'      => 'Activities',
+    'model'      => 'Atividades',
+    'index'      => 'Atividades',
     'create'     => 'Create',
-    'show'       => 'Activity :activity',
-    'edit'       => 'Edit Activity',
-    'delete'     => 'Remove Activity',
+    'show'       => 'Atividades :atividade',
+    'edit'       => 'Editar',
+    'delete'     => 'Remover',
     'id'         => 'id',
     'created_at' => 'Created at',
     'updated_at' => 'Update at',
-    'name' => 'name',
-    'description' => 'description',
+    'name' => 'nome',
+    'description' => 'Descrição',
 ];

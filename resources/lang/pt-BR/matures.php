@@ -15,6 +15,6 @@ return [
     'cpf' => 'cpf',
     'registered_at' => 'registered_at',
     'address' => 'address',
-    'district_id' => 'bairro',
+    'district_id' => 'district_id',
     'NIS' => 'NIS',
 ];

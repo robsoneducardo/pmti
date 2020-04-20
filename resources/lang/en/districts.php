@@ -1,14 +1,14 @@
 <?php
 
 return [
-    'model'      => 'District',
-    'index'      => 'Districts',
-    'create'     => 'Create',
-    'show'       => 'District :district',
-    'edit'       => 'Edit District',
-    'delete'     => 'Remove District',
+    'model'      => 'Bairro',
+    'index'      => 'Bairro',
+    'create'     => 'Criar',
+    'show'       => 'Bairro :district',
+    'edit'       => 'Editar',
+    'delete'     => 'Remover',
     'id'         => 'id',
     'created_at' => 'Created at',
     'updated_at' => 'Update at',
-    'name' => 'name',
+    'name' => 'nome',
 ];
